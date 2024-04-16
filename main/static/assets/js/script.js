@@ -28,3 +28,23 @@ document.getElementById('negativeBtn').addEventListener('click', function() {
         }
     });
 });
+
+// Botão para aplicar o filtro de média aritmética
+document.getElementById('averageBtn').addEventListener('click', function() {
+    var imgData = document.getElementById('uploadedImage').src;
+    $.ajax({
+        type: 'POST',
+        url: applyAverageUrl,
+        data: {
+            'image_data': imgData,
+            'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+        },
+        success: function(response) {
+            $('#uploadedImage').attr('src', response.new_image_src);
+        },
+        error: function(xhr, status, error) {
+            console.error("There was an error with the AJAX request.");
+        }
+    });
+});
+

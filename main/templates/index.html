@@ -13,7 +13,7 @@
         <div id="displayArea" class="image-display"></div>
         <div class="buttons">
             <button id="negativeBtn">Aplicar Negativo</button>
-            <button onclick="applyFilter('average')">Filtro de Média Aritmética</button>
+            <button id="averageBtn">Aplicar Filtro de Média Aritmética</button>
             <button onclick="applyFilter('laplacian')">Filtro de Aguçamento por Laplaciano</button>
             <button onclick="applyFilter('sharpen')">Máscara de Nitidez</button>
         </div>
@@ -27,4 +27,5 @@
 
 <script type="text/javascript">
     var applyNegativeUrl = "{% url 'apply_negative' %}";
+    var applyAverageUrl = "{% url 'apply_average' %}";
 </script>
