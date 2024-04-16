@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Image Processing Project</title>
+    <link rel="stylesheet" href="/static/assets/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Projeto da Disciplina Processamento Digital de Imagens</h1>
+    <div class="content">
+        <div id="displayArea" class="image-display"></div>
+        <div class="buttons">
+            <button id="negativeBtn">Aplicar Negativo</button>
+            <button onclick="applyFilter('average')">Filtro de Média Aritmética</button>
+            <button onclick="applyFilter('laplacian')">Filtro de Aguçamento por Laplaciano</button>
+            <button onclick="applyFilter('sharpen')">Máscara de Nitidez</button>
+        </div>
+    </div>
+    <input type="file" id="imageInput" accept="image/*">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/static/assets/js/script.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+    var applyNegativeUrl = "{% url 'apply_negative' %}";
+</script>
