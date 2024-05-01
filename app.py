@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk, ImageOps
 
+# comentário inútil
 def carregar_imagem():
     # Define os tipos de arquivo para a caixa de diálogo
     tipos_de_arquivo = [
